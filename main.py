@@ -125,6 +125,97 @@ KOREA_TOP_50_SYMBOLS = [
 ]
 
 # -------------------------------------------------------------------
+# MASTER COMPANY NAME MAPPING DICTIONARY
+# -------------------------------------------------------------------
+COMPANY_NAMES = {
+    # Nifty 50 (India)
+    "ADANIENT.NS": "Adani Enterprises", "ADANIPORTS.NS": "Adani Ports", "APOLLOHOSP.NS": "Apollo Hospitals",
+    "ASIANPAINT.NS": "Asian Paints", "AXISBANK.NS": "Axis Bank", "BAJAJ-AUTO.NS": "Bajaj Auto",
+    "BAJFINANCE.NS": "Bajaj Finance", "BAJAJFINSV.NS": "Bajaj Finserv", "BEL.NS": "Bharat Electronics",
+    "BHARTIARTL.NS": "Bharti Airtel", "BPCL.NS": "BPCL", "BRITANNIA.NS": "Britannia Industries",
+    "CIPLA.NS": "Cipla", "COALINDIA.NS": "Coal India", "DRREDDY.NS": "Dr. Reddy's Labs",
+    "EICHERMOT.NS": "Eicher Motors", "ETERNAL.NS": "Eternal", "GRASIM.NS": "Grasim Industries",
+    "HCLTECH.NS": "HCL Technologies", "HDFCBANK.NS": "HDFC Bank", "HDFCLIFE.NS": "HDFC Life",
+    "HEROMOTOCO.NS": "Hero MotoCorp", "HINDALCO.NS": "Hindalco Industries", "HINDUNILVR.NS": "Hindustan Unilever",
+    "ICICIBANK.NS": "ICICI Bank", "INDUSINDBK.NS": "IndusInd Bank", "INFY.NS": "Infosys",
+    "ITC.NS": "ITC Limited", "JSWSTEEL.NS": "JSW Steel", "KOTAKBANK.NS": "Kotak Mahindra Bank",
+    "LT.NS": "Larsen & Toubro", "M&M.NS": "Mahindra & Mahindra", "MARUTI.NS": "Maruti Suzuki",
+    "NESTLEIND.NS": "Nestle India", "NTPC.NS": "NTPC", "ONGC.NS": "ONGC",
+    "POWERGRID.NS": "Power Grid Corp", "RELIANCE.NS": "Reliance Industries", "SBILIFE.NS": "SBI Life Insurance",
+    "SBIN.NS": "State Bank of India", "SHRIRAMFIN.NS": "Shriram Finance", "SUNPHARMA.NS": "Sun Pharma",
+    "TATACONSUM.NS": "Tata Consumer", "TMPV.NS": "Tata Motors", "TMCV.NS": "Tata Motors DVR",
+    "TATASTEEL.NS": "Tata Steel", "TCS.NS": "Tata Consultancy Services", "TECHM.NS": "Tech Mahindra",
+    "TITAN.NS": "Titan Company", "ULTRACEMCO.NS": "UltraTech Cement", "WIPRO.NS": "Wipro",
+
+    # Nasdaq Top 50 (US)
+    "AAPL": "Apple", "MSFT": "Microsoft", "AMZN": "Amazon", "NVDA": "NVIDIA", "GOOGL": "Alphabet (Class A)",
+    "GOOG": "Alphabet (Class C)", "META": "Meta Platforms", "TSLA": "Tesla", "AVGO": "Broadcom", "COST": "Costco",
+    "ASML": "ASML Holding", "TMUS": "T-Mobile US", "CSCO": "Cisco Systems", "PEP": "PepsiCo", "ADBE": "Adobe",
+    "LIN": "Linde", "AMD": "Advanced Micro Devices", "NFLX": "Netflix", "AZN": "AstraZeneca", "QCOM": "Qualcomm",
+    "TXN": "Texas Instruments", "INTC": "Intel", "AMGN": "Amgen", "HON": "Honeywell", "AMAT": "Applied Materials",
+    "CMCSA": "Comcast", "BKNG": "Booking Holdings", "SBUX": "Starbucks", "VRTX": "Vertex Pharmaceuticals", "ADP": "Automatic Data Processing",
+    "GILD": "Gilead Sciences", "MDLZ": "Mondelez International", "REGN": "Regeneron Pharmaceuticals", "ADI": "Analog Devices", "PDD": "PDD Holdings",
+    "ISRG": "Intuitive Surgical", "LRCX": "Lam Research", "MU": "Micron Technology", "INTU": "Intuit", "MELI": "MercadoLibre",
+    "CSX": "CSX Corporation", "PANW": "Palo Alto Networks", "SNPS": "Synopsys", "CDNS": "Cadence Design Systems", "KLAC": "KLA Corporation",
+    "ORLY": "O'Reilly Automotive", "MAR": "Marriott International", "PYPL": "PayPal", "CRWD": "CrowdStrike", "CTAS": "Cintas",
+
+    # Euro Stoxx 50 (Europe)
+    "ASML.AS": "ASML Holding", "MC.PA": "LVMH", "SAP.DE": "SAP SE", "OR.PA": "L'Oréal", "SIE.DE": "Siemens",
+    "TTE.PA": "TotalEnergies", "ALV.DE": "Allianz", "AIR.PA": "Airbus", "SAN.MC": "Banco Santander", "SU.PA": "Schneider Electric",
+    "IBE.MC": "Iberdrola", "RMS.PA": "Hermès", "EL.PA": "EssilorLuxottica", "CDI.PA": "Christian Dior", "DG.PA": "Vinci",
+    "BNP.PA": "BNP Paribas", "BBVA.MC": "BBVA", "ITX.MC": "Inditex", "ENEL.MI": "Enel", "INGA.AS": "ING Group",
+    "ISP.MI": "Intesa Sanpaolo", "BAS.DE": "BASF", "MBG.DE": "Mercedes-Benz Group", "BAYN.DE": "Bayer", "DTE.DE": "Deutsche Telekom",
+    "MUV2.DE": "Munich Re", "DB1.DE": "Deutsche Börse", "CS.PA": "AXA", "BN.PA": "Danone", "ABI.BR": "Anheuser-Busch InBev",
+    "RACE.MI": "Ferrari", "ENI.MI": "Eni", "IFX.DE": "Infineon Technologies", "DHL.DE": "DHL Group", "ADS.DE": "Adidas",
+    "ADYEN.AS": "Adyen", "BMW.DE": "BMW", "CRH.L": "CRH", "AENA.MC": "Aena", "HEIA.AS": "Heineken",
+    "ENGGI.PA": "Engie", "AD.AS": "Ahold Delhaize", "SASY.PA": "Sanofi", "NOKIA.HE": "Nokia", "GLE.PA": "Société Générale",
+    "VOW3.DE": "Volkswagen Group", "REP.MC": "Repsol", "PRX.AS": "Prosus",
+
+    # China & Hong Kong Top 50
+    "601318.SS": "Ping An Insurance", "600519.SS": "Kweichow Moutai", "600036.SS": "China Merchants Bank",
+    "601398.SS": "ICBC", "601857.SS": "PetroChina", "601288.SS": "Agricultural Bank of China",
+    "600028.SS": "Sinopec", "601988.SS": "Bank of China", "601628.SS": "China Life Insurance",
+    "600030.SS": "CITIC Securities", "601088.SS": "China Shenhua Energy", "600900.SS": "China Yangtze Power",
+    "601668.SS": "China State Construction", "601888.SS": "China Tourism Group Duty Free", "600309.SS": "Wanhua Chemical",
+    "600276.SS": "Jiangsu Hengrui Medicine", "600887.SS": "Yili Group", "601012.SS": "LONGi Green Energy",
+    "601328.SS": "Bank of Communications", "600000.SS": "Shanghai Pudong Development Bank", "000858.SZ": "Wuliangye Yibin",
+    "000333.SZ": "Midea Group", "002594.SZ": "BYD Company", "300750.SZ": "CATL",
+    "000651.SZ": "Gree Electric Appliances", "002475.SZ": "Luxshare Precision", "000725.SZ": "BOE Technology",
+    "300014.SZ": "EVE Energy", "000002.SZ": "China Vanke", "002714.SZ": "Muyuan Foods",
+    "000568.SZ": "Luzhou Laojiao", "002352.SZ": "SF Holding", "300274.SZ": "Sungrow Power Supply",
+    "002415.SZ": "Hangzhou Hikvision", "000001.SZ": "Ping An Bank", "9988.HK": "Alibaba Group",
+    "0700.HK": "Tencent Holdings", "3690.HK": "Meituan", "1810.HK": "Xiaomi Corporation",
+    "9618.HK": "JD.com", "2318.HK": "Ping An Insurance (HK)", "0939.HK": "China Construction Bank",
+    "1398.HK": "ICBC (HK)", "3988.HK": "Bank of China (HK)", "0883.HK": "CNOOC",
+    "1211.HK": "BYD Company (HK)", "2269.HK": "Wuxi Biologics", "2020.HK": "ANTA Sports",
+    "1024.HK": "Kuaishou Technology", "9888.HK": "Baidu",
+
+    # Japan Top 50 (Nikkei)
+    "7203.T": "Toyota Motor", "6758.T": "Sony Group", "9984.T": "SoftBank Group", "6861.T": "Keyence", "8306.T": "Mitsubishi UFJ Financial",
+    "6501.T": "Hitachi", "9983.T": "Fast Retailing (Uniqlo)", "8035.T": "Tokyo Electron", "4519.T": "Chugai Pharmaceutical", "7741.T": "HOYA Corporation",
+    "6367.T": "Daikin Industries", "4063.T": "Shin-Etsu Chemical", "6098.T": "Recruit Holdings", "7267.T": "Honda Motor", "8058.T": "Mitsubishi Corporation",
+    "8001.T": "Itochu", "8316.T": "Sumitomo Mitsui Financial", "8411.T": "Mizuho Financial Group", "9432.T": "Nippon Telegraph and Telephone (NTT)", "9433.T": "KDDI",
+    "7974.T": "Nintendo", "6902.T": "Denso", "6954.T": "Fanuc", "6503.T": "Mitsubishi Electric", "7201.T": "Nissan Motor",
+    "6702.T": "Fujitsu", "6752.T": "Panasonic Holdings", "4502.T": "Takeda Pharmaceutical", "4503.T": "Astellas Pharma", "4568.T": "Daiichi Sankyo",
+    "6981.T": "Murata Manufacturing", "7751.T": "Canon", "8031.T": "Mitsui & Co.", "8801.T": "Mitsui Fudosan", "8802.T": "Mitsubishi Estate",
+    "9020.T": "East Japan Railway", "9022.T": "Central Japan Railway", "9101.T": "Nippon Yusen (NYK)", "9104.T": "Mitsui O.S.K. Lines", "9107.T": "Kawasaki Kisen Kaisha",
+    "6273.T": "SMC Corporation", "6301.T": "Komatsu", "7270.T": "Subaru", "7309.T": "Shimano", "6971.T": "Kyocera",
+    "4901.T": "Fujifilm Holdings", "5108.T": "Bridgestone", "2503.T": "Kirin Holdings", "2802.T": "Ajinomoto", "3382.T": "Seven & i Holdings",
+
+    # Korea Top 50 (KOSPI)
+    "005930.KS": "Samsung Electronics", "000660.KS": "SK Hynix", "373220.KS": "LG Energy Solution", "207940.KS": "Samsung Biologics", "005380.KS": "Hyundai Motor",
+    "000270.KS": "Kia Corporation", "035420.KS": "Naver", "005490.KS": "POSCO Holdings", "068270.KS": "Celltrion", "035720.KS": "Kakao",
+    "051910.KS": "LG Chem", "006400.KS": "Samsung SDI", "003550.KS": "LG Corp", "105560.KS": "KB Financial Group", "055550.KS": "Shinhan Financial Group",
+    "012330.KS": "Hyundai Mobis", "028260.KS": "Samsung C&T", "015760.KS": "Korea Electric Power (KEPCO)", "032830.KS": "Samsung Life Insurance", "086790.KS": "Hana Financial Group",
+    "018260.KS": "Samsung SDS", "000810.KS": "Samsung Fire & Marine", "010130.KS": "Korea Zinc", "009150.KS": "Samsung Electro-Mechanics", "034730.KS": "SK Inc",
+    "011200.KS": "HMM", "003670.KS": "POSCO Future M", "034080.KS": "Hyundai Glovis", "329180.KS": "HD Hyundai Heavy Industries", "251270.KS": "Netmarble",
+    "010950.KS": "S-Oil", "000120.KS": "CJ Logistics", "030200.KS": "KT Corporation", "017670.KS": "SK Telecom", "005935.KS": "Samsung Electronics (Pref)",
+    "003490.KS": "Korean Air", "000720.KS": "Hyundai Engineering & Construction", "036570.KS": "NCsoft", "011170.KS": "Lotte Chemical", "004020.KS": "Hyundai Steel",
+    "267250.KS": "Hyundai Heavy Industries", "024110.KS": " 기업은행 (IBK)", "000100.KS": "Yuhan", "005830.KS": "DB Insurance", "000060.KS": "Meritz Financial Group",
+    "006800.KS": "Mirae Asset Securities", "021240.KS": "Coway", "005385.KS": "Hyundai Motor (Pref)", "001040.KS": "CJ Corporation", "033780.KS": "KT&G"
+}
+
+# -------------------------------------------------------------------
 # HIGH-SPEED BULK FETCH ENGINE (SINGLE BATCH HTTP CALL)
 # -------------------------------------------------------------------
 @st.cache_data(ttl=10)
@@ -136,6 +227,9 @@ def get_market_data_bulk(symbols, currency_symbol="$"):
     for symbol in symbols:
         try:
             clean_symbol = symbol.split('.')[0]
+            
+            # Lookup human-readable company name from the master dictionary
+            stock_display_name = COMPANY_NAMES.get(symbol, clean_symbol)
             
             # Retrieve data slice for the specific ticker
             if len(symbols) > 1:
@@ -171,7 +265,7 @@ def get_market_data_bulk(symbols, currency_symbol="$"):
 
             records.append({
                 'Ticker': f"/?symbol={clean_symbol}#{clean_symbol}",
-                'Stock Name': clean_symbol,
+                'Stock Name': stock_display_name,
                 f'Price ({currency_symbol})': curr_price,
                 f'Change ({currency_symbol})': change,
                 '% Change': p_change,
